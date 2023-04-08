@@ -1,0 +1,203 @@
+#pricing-tables {
+    background-color: pink;
+    position: relative;
+}
+
+#pricing-tables .col-md-3,
+#pricing-tables .col-sm-6,
+#pricing-tables .col-xs-12 {
+    margin: 2%;
+    border: 1px solid;
+    border-radius: 20px;
+    background: #fff;
+}
+
+#pricing-tables .col-md-3:hover,
+#pricing-tables .col-sm-6:hover,
+#pricing-tables .col-xs-12:hover {
+    box-shadow: 0px 3px 10px 0px rgb(0 0 0 / 75%) !important;
+    z-index: 2;
+    transform: scale(1.06);
+    border: 0;
+    transition: 0.5s all;
+    border: none;
+}
+.single-table {
+    transition: all 0.2s linear;
+    z-index: 1;
+}
+.single-table .plan-header {
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px;
+}
+.single-table .plan-header h3 {
+    margin: 0;
+    padding: 20px 0 5px 0;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.single-table .plan-price {
+    display: inline-block;
+    margin: 0 0 10px 0;
+    font-size: 25px;
+    font-weight: bold;
+    background: #fff;
+    border-radius: 50%;
+    padding: 33px 15px;
+}
+.single-table .plan-price span {
+    font-size: 14px;
+    font-weight: normal;
+}
+.single-table ul {
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+}
+.single-table ul li {
+    padding: 8px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid white;
+    font-size: 16px;
+    text-align: left;
+    list-style: upper-alpha;
+}
+.single-table .plan-submit {
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px 0 30px 0;
+    padding: 10px 40px;
+    border: 1px solid #ad8a56;
+    color: #ad8a56;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all 0.25s linear;
+}
+.single-table .plan-submit:hover {
+    background: #ad8a56;
+    color: #fff;
+    transition: all 0.25s linear;
+}
+.single-table .hvr-bubble-float-right {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+.single-table .hvr-bubble-float-right:before {
+    position: absolute;
+    z-index: -1;
+    top: calc(50% - 10px);
+    right: 0;
+    content: "";
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+.single-table .hvr-bubble-float-right:hover,
+.single-table .hvr-bubble-float-right:focus,
+.single-table .hvr-bubble-float-right:active {
+    transform: translateX(-10px);
+}
+.single-table .hvr-bubble-float-right:hover:before,
+.single-table .hvr-bubble-float-right:focus:before,
+.single-table .hvr-bubble-float-right:active:before {
+    transform: translateX(10px);
+    border-color: transparent transparent transparent #ad8a56;
+}
+.color-2 .single-table .plan-header {
+    background: #d7d7d7;
+    color: #fff;
+}
+.color-2 .single-table .plan-header .plan-price {
+    color: #d7d7d7;
+    background: #fff;
+}
+.color-2 .single-table .plan-submit {
+    border: 1px solid #d7d7d7;
+    color: #d7d7d7;
+}
+.color-2 .single-table .plan-submit:hover {
+    background: #d7d7d7;
+    color: #fff;
+}
+.color-2 .hvr-bubble-float-right:hover:before,
+.color-2 .hvr-bubble-float-right:focus:before,
+.color-2 .hvr-bubble-float-right:active:before {
+    transform: translateX(10px);
+    border-color: transparent transparent transparent #d7d7d7;
+}
+.color-3 .single-table .plan-header {
+    background: #c9b037;
+    color: #fff;
+}
+.color-3 .single-table .plan-header .plan-price {
+    color: #c9b037;
+    background: #fff;
+}
+.color-3 .single-table .plan-submit {
+    border: 1px solid #c9b037;
+    color: #c9b037;
+}
+.color-3 .single-table .plan-submit:hover {
+    background: #c9b037;
+    color: #fff;
+}
+.color-3 .hvr-bubble-float-right:hover:before,
+.color-3 .hvr-bubble-float-right:focus:before,
+.color-3 .hvr-bubble-float-right:active:before {
+    transform: translateX(10px);
+    border-color: transparent transparent transparent #c9b037;
+}
+.color-4 .single-table .plan-header {
+    background: #b4b4b4;
+    color: #fff;
+}
+.color-4 .single-table .plan-header .plan-price {
+    color: #b4b4b4;
+    background: #fff;
+}
+.color-4 .single-table .plan-submit {
+    border: 1px solid #b4b4b4;
+    color: #b4b4b4;
+}
+.color-4 .single-table .plan-submit:hover {
+    background: #b4b4b4;
+    color: #fff;
+}
+.color-4 .hvr-bubble-float-right:hover:before,
+.color-4 .hvr-bubble-float-right:focus:before,
+.color-4 .hvr-bubble-float-right:active:before {
+    transform: translateX(10px);
+    border-color: transparent transparent transparent #b4b4b4;
+}
+.img {
+    background-repeat: no-repeat;
+    background-position: -120px -120px, 0 0;
+    background-image: linear-gradient(0 0, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 37%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0) 50%);
+    background-size: 250% 250%, 100% 100%;
+    transition: background-position 0s ease;
+}
+.img:hover {
+    background-position: 0 0, 0 0;
+    transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 991px) {
+    .single-table .plan-header h3 {
+        margin: 0;
+        padding: 20px 0 5px 0;
+        text-transform: uppercase;
+        font-size: 19px !important;
+    }
+}
