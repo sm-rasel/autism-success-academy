@@ -42,7 +42,7 @@ class PagesController extends Controller
         $as_seen    = AsSeenSection::where('status', 1)->orderBy('order', 'asc')->get();
         $meet       = MeetSection::where('status', 1)->first();
         $programs   = ProgramSection::where('status', 1)->orderBy('order', 'asc')->get();
-        $successes  = SuccessSection::where('is_featured', 1)->where('status', 1)->orderBy('order', 'asc')->take(3)->get();
+        $successes  = SuccessSection::where('is_featured', 1)->where('status', 1)->orderBy('order', 'desc')->take(3)->get();
         $blogs      = BlogSection::with('blogCategory:id,category_name')->where('status', 1)->where('is_featured', 1)->orderBy('id', 'asc')->take(3)->get();
         $social     = SocialMediaSection::first();
 
@@ -60,8 +60,8 @@ class PagesController extends Controller
 
     public function blog()
     {
-        $blogs      = BlogSection::with('blogCategory:id,category_name')->where('status', 1)->orderBy('id', 'asc')->take(3)->get();
-        $nextBlog   = BlogSection::skip(3)->select('title','slug')->orderBy('id', 'asc')->first();
+        $blogs      = BlogSection::with('blogCategory:id,category_name')->where('status', 1)->orderBy('id', 'desc')->take(3)->get();
+        $nextBlog   = BlogSection::skip(3)->select('title','slug')->orderBy('id', 'asc')->get();
         $social     = SocialMediaSection::first();
         return view('website.blog')->with(['blogs' => $blogs, 'nextBlog' => $nextBlog, 'social' => $social]);
     }
@@ -69,7 +69,7 @@ class PagesController extends Controller
     public function blogDetails($slug)
     {
         $blog       = BlogSection::where('slug', $slug)->first();
-        $nextBlog   = BlogSection::where('id','>', $blog->id)->select('title','slug')->first();
+        $nextBlog   = BlogSection::where('id','>', $blog->id)->select('title','slug')->get();
         $social     = SocialMediaSection::first();
         return view('website.blog_details')->with([
             'blog'      => $blog,
